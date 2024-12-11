@@ -18,6 +18,13 @@
     </li>
     <li><b>Kết quả:</b> Giá trị quyền chọn mua ( $\ C_0$) hoặc quyền chọn bán ( $\ P_0$ ) tại thời điểm hiện tại.</li>
 </ul>
+
+<h3>Công thức Black-Scholes</h3>
+<p>Công thức giá quyền chọn mua:</p>
+<p text-align: center> $\ C_0 = S_0 * N(d_1) - K*e^(-rT)*N(d_2) $</p>
+<p>Công thức giá quyền chọn bán:</p>
+<p text-align: center> $\ C_0 = S_0 * N(d_1) - K*e^(-rT)*N(d_2) $</p>
+
 <br>
 <br>
 <h2>Vấn đề 2: Tìm điểm cân bằng Nash trong lý thuyết trò chơi</h2>
