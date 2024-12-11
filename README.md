@@ -101,18 +101,18 @@
 <table>
 <tr>
     <td></td>
-    <td>B: 5% (Thấp)</td>
-    <td>B: 7% (Cao)</td>
+    <td><b>B: 5% (Thấp)</b></td>
+    <td><b>B: 7% (Cao)</b></td>
 </tr>
 
 <tr>
-    <td>A: 5% (Thấp)</td>
+    <td><b>A: 5% (Thấp)</b></td>
     <td>A:1,5 tỷ, B:1,5 tỷ</td>
     <td>A:0,9 tỷ, B:0,7 tỷ</td>
 </tr>
 
 <tr>
-    <td>A: 7% (Cao)</td>
+    <td><b>A: 7% (Cao)</b></td>
     <td>A:0,7 tỷ, B:0,9 tỷ</td>
     <td>A:0,5 tỷ, B:0,5 tỷ</td>
 </tr>
