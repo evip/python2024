@@ -28,7 +28,7 @@
 <p text-align: center> $\ d_1 $</p>
 
 <ul>
-    <li> <p> $\ d_1 $ </p> </li>
+    <li> $\ d_1 $ </li>
     <li> $\ d_2 = d_1 - &sigma * sqrt{T} $ </li>
     <li>N(x): Hàm phân phối tích lũy chuẩn của phân phối chuẩn chuẩn hóa N(0,1).</li>
 </ul>
