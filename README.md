@@ -9,7 +9,7 @@
     <li><b>Mục tiêu:</b> Dự đoán giá trị quyền chọn bằng cách giả định rằng giá tài sản cơ sở (như cổ phiếu) thay đổi theo thời gian dựa trên một quá trình ngẫu nhiên.</li>
     <li><b>Đầu vào:</b> Các yếu tố ảnh hưởng đến giá trị quyền chọn:
     </li>
-    <li><b>Kết quả:</b> Giá trị quyền chọn mua ( $\C_0$) hoặc quyền chọn bán ( $\ P_0$ ) tại thời điểm hiện tại.</li>
+    <li><b>Kết quả:</b> Giá trị quyền chọn mua ( $\ C_0$) hoặc quyền chọn bán ( $\ P_0$ ) tại thời điểm hiện tại.</li>
 </ul>
 <br>
 <br>
