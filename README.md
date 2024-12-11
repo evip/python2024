@@ -27,7 +27,7 @@
 <br>
 <ul>
     <li> $\ d_1 $ :    </li>
-    <li>$\ d_2 = d_1 - σ sqrt{T​} $ </li>
+    <li>$\ d_2 = d_1 - σ * sqrt{T​} $ </li>
     <li>N(x): Hàm phân phối tích lũy chuẩn của phân phối chuẩn chuẩn hóa N(0,1).</li>
 </ul>
 
