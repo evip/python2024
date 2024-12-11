@@ -4,6 +4,13 @@
 
 <h2>Vấn đề 1: Định giá Quyền chọn theo mô hình Black-Scholes</h2>
 <p>Mô hình Black-Scholes, còn được gọi là mô hình Black-Scholes-Merton, là một trong những mô hình nổi tiếng nhất trong tài chính toán học, được sử dụng để định giá các quyền chọn. Mô hình cung cấp một công thức tính giá lý thuyết cho quyền chọn mua (call option) và quyền chọn bán (put option) trên tài sản tài chính.</p>
+<h3>Giới thiệu</h3>
+<ul>
+    <li><b>Mục tiêu:</b> Dự đoán giá trị quyền chọn bằng cách giả định rằng giá tài sản cơ sở (như cổ phiếu) thay đổi theo thời gian dựa trên một quá trình ngẫu nhiên.</li>
+    <li><b>Đầu vào:</b> Các yếu tố ảnh hưởng đến giá trị quyền chọn:
+    </li>
+    <li><b>Kết quả:</b> Giá trị quyền chọn mua ( $\C_0) hoặc quyền chọn bán ( $\P_0 ) tại thời điểm hiện tại.</li>
+</ul>
 <br>
 <br>
 <h2>Vấn đề 2: Tìm điểm cân bằng Nash trong lý thuyết trò chơi</h2>
