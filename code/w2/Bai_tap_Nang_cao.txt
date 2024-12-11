@@ -1,0 +1,162 @@
+Bài tập 1: Chú thích trong Python
+Yêu cầu:
++ Viết code tính chu vi và diện tích hình tròn với bán kính r.
++ Có chú thích giải thích mỗi bước.
++ Công thức: chu vi = 2 * π * r, diện tích = π * r^2 (π dùng math.pi).
+
+Gợi ý lời giải:
+
+import math
+# Bán kính hình tròn
+r = 5
+
+# Tính chu vi hình tròn
+circumference = 2 * math.pi * r  # Công thức chu vi
+
+# Tính diện tích hình tròn
+area = math.pi * (r ** 2)  # Công thức diện tích
+
+# In kết quả
+print("Chu vi hình tròn:", circumference)
+print("Diện tích hình tròn:", area)
+
+------------------------------------------------------------------------
+
+Bài tập 2: Khái niệm biến & Đặt tên biến
+Yêu cầu:
++ Viết code giải phương trình bậc nhất ax + b = 0.
++ Người dùng nhập a và b từ bàn phím.
++ In ra nghiệm của phương trình (x = -b/a nếu a ≠ 0, nếu a=0 và b=0 thì vô số nghiệm, nếu a=0 và b≠0 thì vô nghiệm).
++ Viết chú thích rõ ràng.
+
+Gợi ý lời giải:
+
+# Nhập hệ số a và b
+a = float(input("Nhập a: "))
+b = float(input("Nhập b: "))
+
+# Giải phương trình ax + b = 0
+if a != 0:
+    x = -b / a
+    print("Nghiệm của phương trình là x =", x)
+else:
+    # Nếu a = 0
+    if b == 0:
+        print("Phương trình có vô số nghiệm")
+    else:
+        print("Phương trình vô nghiệm")
+
+------------------------------------------------------------------------
+
+Bài tập 3: Phép gán và hoán đổi giá trị
+Yêu cầu:
++ Tạo biến x = 10, y = 20.
++ Hoán đổi giá trị hai biến mà không dùng biến tạm.
++ In ra trước và sau khi hoán đổi.
+
+Gợi ý lời giải:
+
+x = 10
+y = 20
+print("Trước hoán đổi: x =", x, ", y =", y)
+x, y = y, x
+print("Sau hoán đổi: x =", x, ", y =", y)
+
+------------------------------------------------------------------------
+
+Bài tập 4: Các phép toán trong Python (Tổng các chữ số)
+Yêu cầu:
++ Nhập vào số nguyên n.
++ Tính tổng các chữ số của n.
++ Ví dụ: n = 123 → 1+2+3 = 6.
+
+Gợi ý lời giải:
+
+n_str = input("Nhập một số nguyên: ")
+total = 0
+for ch in n_str:
+    total += int(ch)  # chuyển ký tự thành số và cộng vào tổng
+print("Tổng các chữ số là:", total)
+
+------------------------------------------------------------------------
+
+Bài tập 5: Kiểu dữ liệu cơ bản (Kiểm tra giá trị nhập)
+Yêu cầu:
++ Nhập một giá trị từ bàn phím.
++ Kiểm tra xem giá trị đó có thể chuyển thành số nguyên hay không.
++ Nếu được, in "Đây là số nguyên", ngược lại "Đây không phải là số nguyên".
+
+Gợi ý lời giải:
+
+value = input("Nhập một giá trị: ")
+try:
+    int_value = int(value)
+    print("Đây là số nguyên")
+except ValueError:
+    print("Đây không phải là số nguyên")
+
+------------------------------------------------------------------------
+
+Bài tập 6: Kiểu chuỗi và định dạng
+Yêu cầu:
++ Cho chuỗi s = "Python is awesome!".
++ In ra chuỗi:
++ Tất cả chữ hoa
++ Tất cả chữ thường
++ Chỉ viết hoa chữ cái đầu mỗi từ
++ Đếm số lần xuất hiện của ký tự 'o'
+
+Gợi ý lời giải:
+s = "Python is awesome!"
+print("Chữ hoa:", s.upper())
+print("Chữ thường:", s.lower())
+print("Viết hoa chữ cái đầu mỗi từ:", s.title())
+count_o = s.count('o')
+print("Số lần xuất hiện của 'o':", count_o)
+
+------------------------------------------------------------------------
+
+Bài tập 7: Chuyển đổi kiểu (Kết hợp)
+Yêu cầu:
++ Nhập chiều dài và chiều rộng của hình chữ nhật (dưới dạng chuỗi).
++ Chuyển sang float.
++ Tính diện tích (dài * rộng).
++ In ra kết quả làm tròn 2 chữ số thập phân.
+
+Gợi ý lời giải:
+length_str = input("Nhập chiều dài: ")
+width_str = input("Nhập chiều rộng: ")
+
+length = float(length_str)
+width = float(width_str)
+
+area = length * width
+print(f"Diện tích hình chữ nhật là: {area:.2f}")
+
+------------------------------------------------------------------------
+
+Bài tập nâng cao 8: Tổng hợp
+
+Yêu cầu:
++ Nhập tên, tuổi (dạng chuỗi) từ bàn phím.
++ Chuyển tuổi sang số nguyên, kiểm tra hợp lệ.
++ Nếu tuổi > 18 in "Bạn là người trưởng thành", ngược lại "Bạn chưa đủ tuổi trưởng thành".
++ Dùng f-string để in kết quả.
+
+Gợi ý lời giải:
+
+name = input("Nhập tên: ")
+age_str = input("Nhập tuổi: ")
+
+try:
+    age = int(age_str)
+    # In lời chào
+    print(f"Xin chào {name}, bạn {age} tuổi.")
+    if age > 18:
+        print("Bạn là người trưởng thành.")
+    else:
+        print("Bạn chưa đủ tuổi trưởng thành.")
+except ValueError:
+    print("Tuổi không hợp lệ, vui lòng nhập số nguyên.")
+
+------------------------------------------------------------------------

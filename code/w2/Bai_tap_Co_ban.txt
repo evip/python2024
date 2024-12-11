@@ -1,0 +1,135 @@
+Bài tập 1: Chú thích trong Python
+Yêu cầu:
++ Viết một đoạn code in ra câu "Hello, Python!".
++ Thêm chú thích để giải thích mục đích của từng dòng lệnh.
+Gợi ý lời giải:
+# In ra màn hình lời chào
+print("Hello, Python!")  # Dòng này in chuỗi "Hello, Python!"
+
+---------------------------------------------------------------
+
+Bài tập 2: Khái niệm biến
+Yêu cầu:
++ Tạo biến name chứa tên của bạn và age chứa tuổi của bạn.
++ In ra màn hình câu: "Tôi tên là <tên> và tôi <tuổi> tuổi".
+Gợi ý lời giải:
+name = "An"
+age = 25
+print("Tôi tên là", name, "và tôi", age, "tuổi")
+# Hoặc dùng f-string
+print(f"Tôi tên là {name} và tôi {age} tuổi")
+
+---------------------------------------------------------------
+
+Bài tập 3: Đặt tên biến
+Yêu cầu:
++ Tạo các biến student_name, student_age, is_graduated.
++ Gán giá trị giả lập và in ra giá trị từng biến.
+Gợi ý lời giải:
+student_name = "Bình"
+student_age = 20
+is_graduated = False
+
+print(student_name)
+print(student_age)
+print(is_graduated)
+
+---------------------------------------------------------------
+
+Bài tập 4: Phép gán
+Yêu cầu:
++ Tạo biến x gán giá trị 10.
++ Tạo biến y gán giá trị của x.
+In ra x và y.
+Gợi ý lời giải:
+x = 10
+y = x
+print("x =", x)
+print("y =", y)
+
+---------------------------------------------------------------
+
+Bài tập 5: Các phép toán trong Python
+Yêu cầu:
++ Cho a = 15, b = 4.
++ Tính và in ra: a+b, a-b, a*b, a/b, a//b, a%b.
+Gợi ý lời giải:
+a = 15
+b = 4
+print("a + b =", a + b)
+print("a - b =", a - b)
+print("a * b =", a * b)
+print("a / b =", a / b)
+print("a // b =", a // b)
+print("a % b =", a % b)
+
+---------------------------------------------------------------
+
+Bài tập 6: Kiểu dữ liệu cơ bản
+Yêu cầu:
++ Tạo các biến number = 10, float_number = 10.5, text = "Hello", is_valid = True.
++ In ra kiểu dữ liệu của từng biến bằng hàm type().
+Gợi ý lời giải:
+number = 10
+float_number = 10.5
+text = "Hello"
+is_valid = True
+
+print(type(number))
+print(type(float_number))
+print(type(text))
+print(type(is_valid))
+
+---------------------------------------------------------------
+
+Bài tập 7: Kiểu chuỗi và định dạng
+Yêu cầu:
++ Cho first_name = "An" và last_name = "Nguyen".
++ Nối chuỗi thành họ tên đầy đủ.
++ In ra bằng f-string: "Họ tên của tôi là: <họ tên>".
+Gợi ý lời giải:
+first_name = "An"
+last_name = "Nguyen"
+full_name = first_name + " " + last_name
+print(f"Họ tên của tôi là: {full_name}")
+
+---------------------------------------------------------------
+
+Bài tập 8: Chuyển đổi kiểu số
+Yêu cầu:
++ Cho num_str = "123". Chuyển sang số nguyên và cộng thêm 10.
++ In ra kết quả.
+Gợi ý lời giải:
+num_str = "123"
+num_int = int(num_str)
+result = num_int + 10
+print("Kết quả:", result)
+
+---------------------------------------------------------------
+
+Bài tập 9: Chuyển đổi kiểu chuỗi
+Yêu cầu:
++ Cho num = 45. Chuyển num sang chuỗi và nối với một chuỗi khác.
++ In ra: "Tuổi của tôi là 45".
+Gợi ý lời giải:
+num = 45
+age_str = str(num)
+print("Tuổi của tôi là " + age_str)
+
+---------------------------------------------------------------
+
+Bài tập 10:
+Yêu cầu:
++ Tạo biến a = 5 (int), b = 3.14 (float), c = "10" (str).
++ Chuyển c sang số nguyên rồi cộng với a.
++ In ra kết quả kèm chú thích.
+Gợi ý lời giải:
+a = 5
+b = 3.14
+c = "10"
+c_int = int(c)
+sum_result = a + c_int
+print("Tổng a và c_int là:", sum_result)  # c_int là c sau khi chuyển sang int
+
+---------------------------------------------------------------
+
