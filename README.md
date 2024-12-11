@@ -4,9 +4,10 @@
 
 <h2>Vấn đề 1: Định giá Quyền chọn theo mô hình Black-Scholes</h2>
 
-
+<br>
+<br>
 <h2>Vấn đề 2: Tìm điểm cân bằng Nash trong lý thuyết trò chơi</h2>
-<h3>Cạnh tranh định giá trong một thị trường độc quyền nhóm</h3>
+<h3>2.1 Cạnh tranh định giá trong một thị trường độc quyền nhóm</h3>
 <p>Giả sử có hai công ty A và B cùng sản xuất một loại sản phẩm tương tự (ví dụ: nước giải khát) và phải quyết định về giá bán sản phẩm. Mỗi công ty đều muốn tối đa hóa lợi nhuận. Lợi nhuận này phụ thuộc vào lựa chọn giá của cả hai. Nếu một công ty định giá quá cao so với đối thủ, họ có nguy cơ mất thị phần. Ngược lại, nếu định giá quá thấp để hút khách, họ có thể giảm biên lợi nhuận.</p>
 
 <p>Trong mô hình đơn giản, hai công ty có thể đưa ra hai mức giá: Cao (H) hoặc Thấp (L). Mỗi sự kết hợp (A chọn H/L, B chọn H/L) sẽ dẫn đến một cặp lợi nhuận khác nhau. Chúng ta có thể biểu diễn kết quả này thông qua một bảng payoff.</p>
@@ -34,7 +35,8 @@
     <li>Khi cả hai cùng chọn Thấp, giá rẻ hơn nên lợi nhuận biên thấp, họ chia thị phần tương đối đều, mỗi bên được 10.</li>
 </ul>
 
-<h3>Cạnh tranh lãi suất tiền gửi giữa hai ngân hàng</h3>
+<br>
+<h3>2.2 Cạnh tranh lãi suất tiền gửi giữa hai ngân hàng</h3>
 <p>Giả sử có hai ngân hàng lớn trên cùng địa bàn, Ngân hàng A và Ngân hàng B. Họ đang cố gắng thu hút nguồn vốn nhàn rỗi từ khách hàng bằng cách đưa ra lãi suất cho tiền gửi tiết kiệm kỳ hạn 12 tháng. Lợi nhuận của ngân hàng phần lớn đến từ chênh lệch lãi suất (huy động - cho vay). Tuy nhiên, để đơn giản hóa, ta xem xét khía cạnh thu hút khách hàng gửi tiền:</p>
 <ul>
     <li>Cầu tiền gửi trên thị trường là hữu hạn (ví dụ: 100 tỷ đồng).
@@ -58,7 +60,7 @@
     <li>Nếu một ngân hàng huy động D tỷ đồng, lợi nhuận = (8% - r%) * D (tính trên vốn huy động sau một năm, giả sử tỷ đơn giản).</li>
 </ul>
 
-<p>Thiết lập bài toán:</p>
+<p><b>Thiết lập bài toán:</b></p>
 
 <ol>
 <li>Nếu cả hai chọn 5%:
@@ -94,3 +96,36 @@
 </li>
 
 </ol>
+
+<p>Bảng lợi nhuận</p>
+<table>
+<tr>
+    <td></td>
+    <td>B: 5% (Thấp)</td>
+    <td>B: 7% (Cao)</td>
+</tr>
+
+<tr>
+    <td>A: 5% (Thấp)</td>
+    <td>A:1,5 tỷ, B:1,5 tỷ</td>
+    <td>A:0,9 tỷ, B:0,7 tỷ</td>
+</tr>
+
+<tr>
+    <td>A: 7% (Cao)</td>
+    <td>A:0,7 tỷ, B:0,9 tỷ</td>
+    <td>A:0,5 tỷ, B:0,5 tỷ</td>
+</tr>
+</table>
+
+<p><b>Phân tích:</b></p>
+<ul>
+    <li>Tình huống (5%,5%) cho mỗi bên 1,5 tỷ. Nếu một bên chuyển từ 5% lên 7%, lợi nhuận của họ giảm xuống 0,7 tỷ hoặc 0,9 tỷ (so với 1,5 tỷ lúc ban đầu). Không có lợi.</li>
+    <li>Tình huống (7%,7%) mỗi bên chỉ được 0,5 tỷ. Nếu một bên hạ về 5% thì họ sẽ được 0,9 tỷ (hoặc 1,5 tỷ nếu bên kia vẫn cố chấp 7%). Như vậy, từ (7%,7%) mỗi bên đều muốn hạ về 5% để tăng lợi nhuận. (7%,7%) không ổn định.</li>
+</ul>
+
+<p>Điểm cân bằng Nash trong ví dụ này chính là (5%,5%) vì:</p>
+<ul>
+    <li>Tại (5%,5%), không một ngân hàng nào có động lực tăng lãi suất lên 7% vì lợi nhuận sẽ giảm (từ 1,5 tỷ xuống 0,9 hoặc 0,7 tỷ).</li>
+    <li>Như vậy, không ai muốn đổi chiến lược đơn phương.</li>
+</ul>
