@@ -1,4 +1,4 @@
-# python2024
+# Python_2024
 
 <h1>Sinh viên học Python thông qua các vấn đề sau.</h1>
 
@@ -14,20 +14,24 @@
 <table>
 <tr>
     <td></td>
-    <td>B: Cao (H)	</td>
-    <td>B: Thấp (L)</td>
+    <td><b>B: Cao (H)	</b></td>
+    <td><b>B: Thấp (L)</b></td>
 </tr>
 <tr>
-    <td>A: Cao (H)</td>
+    <td><b>A: Cao (H)</b></td>
     <td>A: 20, B: 20</td>
     <td>A: 5, B: 25</td>
 </tr>
 <tr>
-    <td>A: Thấp (L)</td>
+    <td><b>A: Thấp (L)</b></td>
     <td>A: 25, B: 5</td>
     <td>A: 10, B: 10</td>
 </tr>
 </table>
+<ul>
+    <li>Khi cả hai chọn giá Cao, mỗi bên bán được ít nhưng với lợi nhuận trên đơn vị cao hơn, thu về lợi nhuận trung bình (20,20).</li>
+    <li>Khi A chọn Cao, B chọn Thấp, B thu hút khách hàng về phía mình nên B được 25, A chỉ được 5. Tương tự khi A chọn Thấp, B chọn Cao thì A được 25, B được 5.</li>
+    <li>Khi cả hai cùng chọn Thấp, giá rẻ hơn nên lợi nhuận biên thấp, họ chia thị phần tương đối đều, mỗi bên được 10.</li>
+</ul>
 
-<h2>Vấn đề 3.</h2>
 
