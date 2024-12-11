@@ -3,7 +3,7 @@
 <h1>Sinh viên học Python thông qua các vấn đề sau.</h1>
 
 <h2>Vấn đề 1: Định giá Quyền chọn theo mô hình Black-Scholes</h2>
-
+<p>Mô hình Black-Scholes, còn được gọi là mô hình Black-Scholes-Merton, là một trong những mô hình nổi tiếng nhất trong tài chính toán học, được sử dụng để định giá các quyền chọn. Mô hình cung cấp một công thức tính giá lý thuyết cho quyền chọn mua (call option) và quyền chọn bán (put option) trên tài sản tài chính.</p>
 <br>
 <br>
 <h2>Vấn đề 2: Tìm điểm cân bằng Nash trong lý thuyết trò chơi</h2>
