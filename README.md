@@ -24,6 +24,14 @@
 <p text-align: center> $\ C_0 = S_0 * N(d_1) - K*e^{-r*T} * N(d_2) $</p>
 <p>Công thức giá quyền chọn bán:</p>
 <p text-align: center> $\ P_0 = K*e^{-rT} * N(-d_2) - S_0 * N(-d_1) $</p>
+<br>
+<ul>
+    <li> $\ d_1 $ :
+        <p></p>
+    </li>
+    <li>$\ d_2 = d_1 - σ sqrt{T​} $ </li>
+    <li>N(x): Hàm phân phối tích lũy chuẩn của phân phối chuẩn chuẩn hóa N(0,1).</li>
+</ul>
 
 <br>
 <br>
