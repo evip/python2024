@@ -26,8 +26,8 @@
 <p text-align: center> $\ P_0 = K*e^{-rT} * N(-d_2) - S_0 * N(-d_1) $</p>
 
 <ul>
-    <li><p text-align: center> $\ d_1 = &sigma $</p></li>
-    <li><p text-align: center> $\ d_2 = d_1 - &sigma * sqrt{T} $</p></li>
+    <li><p text-align: center> $\ d_1$</p></li>
+    <li><p text-align: center> $\ d_2 = d_1 - &#1004; * sqrt{T} $</p></li>
     <li>N(x): Hàm phân phối tích lũy chuẩn của phân phối chuẩn chuẩn hóa N(0,1).</li>
 </ul>
 
