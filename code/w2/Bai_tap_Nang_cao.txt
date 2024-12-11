@@ -135,7 +135,7 @@ print(f"Diện tích hình chữ nhật là: {area:.2f}")
 
 ------------------------------------------------------------------------
 
-Bài tập nâng cao 8: Tổng hợp
+Bài tập 8: Tổng hợp
 
 Yêu cầu:
 + Nhập tên, tuổi (dạng chuỗi) từ bàn phím.
