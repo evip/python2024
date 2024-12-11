@@ -59,12 +59,13 @@
 </ul>
 
 <p>Thiết lập bài toán:</p>
+
 <ol>
 <li>Nếu cả hai chọn 5%:
     <ul>
         <li>Mỗi bên huy động 50 tỷ đồng.</li>
         <li>Lợi nhuận mỗi bên = (8% - 5%) * 50 tỷ = 3% * 50 tỷ = 1,5 tỷ.</li>
-    <ul>
+    </ul>
 </li>
 
 <li>Nếu A chọn 5%, B chọn 7%:
@@ -72,7 +73,7 @@
         <li>B có lãi suất cao hơn -> B huy động 70 tỷ, A huy động 30 tỷ.</li>
         <li>Lợi nhuận A = (8% - 5%) * 30 tỷ = 3% * 30 = 0,9 tỷ</li>
         <li>Lợi nhuận B = (8% - 7%) * 70 tỷ = 1% * 70 = 0,7 tỷ</li>
-    <ul>
+    </ul>
 </li>
 
 
@@ -81,7 +82,7 @@
         <li>A huy động 70 tỷ, B huy động 30 tỷ.</li>
         <li>Lợi nhuận A = (8% - 7%) * 70 tỷ = 1% * 70 = 0,7 tỷ</li>
         <li>Lợi nhuận B = (8% - 5%) * 30 tỷ = 3% * 30 = 0,9 tỷ</li>
-    <ul>
+    </ul>
 </li>
 
 
@@ -89,6 +90,7 @@
     <ul>
         <li>Cả hai đều ra giá cao, chia đều 50-50.</li>
         <li>Lợi nhuận mỗi bên = (8% - 7%) * 50 tỷ = 1% * 50 = 0,5 tỷ.</li>
-    <ul>
+    </ul>
 </li>
+
 </ol>
