@@ -1,0 +1,98 @@
+Mô-đun tai_chinh.py chứa các hàm liên quan đến tính toán tài chính cơ bản, như NPV (Net Present Value), IRR (Internal Rate of Return), PV (Present Value) của một dòng tiền. Các hàm này có thể được sử dụng lại trong các dự án phân tích tài chính.
+
+1. Hàm tinh_npv(cash_flows, discount_rate)
+
+* Chức năng:
+Hàm tinh_npv tính giá trị hiện tại ròng (Net Present Value - NPV) của một chuỗi dòng tiền tương lai, chiết khấu về hiện tại với một lãi suất nhất định.
+
+* Công thức:
+NPV = Σ (CF_t / (1 + r)^t)
+Trong đó:
+	CF_t là dòng tiền tại năm t (t = 1, 2, 3, …)
+	r là lãi suất chiết khấu (discount_rate)
+	t là năm tương ứng của dòng tiền
+
+* Tham số đầu vào:
+	cash_flows: Danh sách (list) các dòng tiền tương ứng cho từng kỳ (thường mỗi phần tử là một số thực hoặc số nguyên, có thể âm hoặc dương). Ví dụ: [-1000, 200, 300, 500]
+	discount_rate: Lãi suất chiết khấu (float). Ví dụ: 0.1 tương ứng 10%.
+
+* Giá trị trả về:
+	Giá trị NPV (float), đại diện cho tổng giá trị hiện tại của chuỗi dòng tiền.
+
+* Ý nghĩa tài chính:
+NPV giúp đánh giá giá trị hiện tại của một dự án hay một khoản đầu tư với dòng tiền tương lai, từ đó ra quyết định đầu tư (NPV > 0: nên đầu tư, NPV < 0: không nên đầu tư).
+
+* Ví dụ sử dụng:
+
+dong_tien = [-1000, 200, 300, 500]
+r = 0.1
+npv = tinh_npv(dong_tien, r)
+print(npv)
+
+--------------------------------------------------------------
+
+
+2. Hàm tinh_pv(fv, r, n)
+
+* Chức năng:
+	Hàm tinh_pv (Present Value) tính giá trị hiện tại của một khoản tiền trong tương lai (Future Value - FV) khi có lãi suất chiết khấu r và số kỳ n.
+
+* Công thức:
+	PV = FV / (1 + r)^n
+Trong đó:
+	FV là giá trị tương lai ở kỳ n
+	r là lãi suất chiết khấu (có thể là lãi suất năm)
+	n là số kỳ (thường tính theo năm, quý, tháng tùy quy ước)
+
+* Tham số đầu vào:
+	fv: Giá trị tương lai (float hoặc int).
+	r: Lãi suất chiết khấu (float).
+	n: Số kỳ chiết khấu (int).
+
+* Giá trị trả về:
+	PV (float), giá trị hiện tại của khoản tiền fv sau n kỳ.
+
+* Ý nghĩa tài chính:
+	Giúp xác định giá trị hiện tại của một số tiền sẽ nhận được trong tương lai, qua đó so sánh với các cơ hội đầu tư khác ở hiện tại.
+
+* Ví dụ sử dụng:
+pv_value = tinh_pv(1000, 0.05, 3)  # Chiết khấu 3 năm với lãi suất 5%
+print(pv_value)
+
+--------------------------------------------------------------
+
+
+3. Hàm tinh_irr(cash_flows)
+
+* Chức năng:
+	Hàm tinh_irr (Internal Rate of Return - IRR) tìm tỷ lệ hoàn vốn nội bộ, tức là lãi suất r mà tại đó NPV của chuỗi dòng tiền bằng 0. Nói cách khác, IRR là lãi suất hoà vốn của dự án.
+
+* Phương pháp tính:
+	- IRR thường phải tính bằng phương pháp xấp xỉ vì không có công thức giải đóng đơn giản.
+	- Một cách đơn giản là dùng phương pháp chia đôi (binary search) hoặc một số thuật toán tối ưu hoá để tìm ra r mà tinh_npv(cash_flows, r) tiệm cận 0.
+	- Hàm trong ví dụ sử dụng binary search trong khoảng từ low=0.0 đến high=1.0 (tức 0% đến 100%/năm) để tìm ra IRR với sai số xác định (tol).
+
+* Tham số đầu vào:
+	cash_flows: Danh sách các dòng tiền (giống như trong tinh_npv).
+
+* Giá trị trả về:
+	IRR (float), lãi suất mà tại đó NPV = 0.
+
+* Ý nghĩa tài chính:
+	IRR giúp so sánh mức sinh lời nội bộ của dự án với lãi suất yêu cầu. Nếu IRR > lãi suất yêu cầu, dự án khả thi.
+
+* Ví dụ sử dụng:
+dong_tien = [-1000, 200, 300, 500]
+irr = tinh_irr(dong_tien)
+print(irr)  # Ví dụ khoảng 0.13 (13%)
+
+---------------------------------------------------------------
+
+
+Tóm tắt ý nghĩa và mối liên hệ giữa các hàm
+	tinh_npv: Đánh giá giá trị hiện tại của dòng tiền, cho biết dự án có nên đầu tư hay không.
+	tinh_pv: Tính giá trị hiện tại của một khoản tiền đơn lẻ trong tương lai, một hàm cơ bản để định giá dòng tiền.
+	tinh_irr: Tìm lãi suất tại đó dự án hoà vốn (NPV = 0), dùng để so sánh với lãi suất yêu cầu hoặc chi phí vốn.
+
+
+

@@ -1,0 +1,106 @@
+1. Hàm
+Hàm (function) trong Python là một khối mã được đóng gói để thực hiện một nhiệm vụ cụ thể. Hàm giúp chia chương trình thành các phần nhỏ, tăng khả năng tái sử dụng mã và làm cho mã dễ đọc hơn.
+
+Cấu trúc code:
+def ten_ham(tham_so_1, tham_so_2):
+    # Khối lệnh của hàm
+    ket_qua = tham_so_1 + tham_so_2
+    return ket_qua
+
+Ví dụ: Bạn có thể tự định nghĩa hàm của riêng mình bằng cách sử dụng từ khóa def, đặt tên hàm, danh sách tham số (nếu có) và khối lệnh bên trong. Sau đó, khi cần, bạn gọi hàm bằng cách sử dụng tên hàm kèm đối số thích hợp.
+
+def tinh_lai_suat_von_goc(von_goc, lai_suat, so_nam):
+    # lai_suat tính theo năm, von_goc là vốn ban đầu
+    return von_goc * (1 + lai_suat) ** so_nam
+
+lai = tinh_lai_suat_von_goc(1000, 0.05, 3)
+print(lai)
+
+2. Phạm vi biến
+Phạm vi cục bộ (local): Biến được định nghĩa bên trong hàm chỉ có hiệu lực bên trong hàm đó.
+Phạm vi toàn cục (global): Biến được định nghĩa bên ngoài mọi hàm sẽ có thể được truy cập trong phạm vi toàn chương trình.
+
+x = 10  # biến toàn cục
+
+def test_scope():
+    x = 5  # biến cục bộ trong hàm
+    print("Bên trong hàm, x =", x)
+
+test_scope()  
+print("Bên ngoài hàm, x =", x)  # x bên ngoài vẫn là 10
+
+3. Tham số và truyền tham số
+- Tham số (parameters): Được định nghĩa trong phần khai báo hàm.
+- Đối số (arguments): Giá trị thực sự được truyền vào hàm khi gọi hàm.
+
+# đối số x
+def tang_gia_tri(x):
+    x += 1
+    return x
+
+# code
+# tham số a
+a = 10
+b = tang_gia_tri(a)
+print(a)  # a vẫn là 10
+print(b)  # b là 11
+
+4. Gọi mô-đun (Import modules)
+
+import math
+print(math.sqrt(16))  # Kết quả: 4.0
+
+# gọi cụ thể hàm trong module
+from math import sqrt
+print(sqrt(25))  # Kết quả: 5.0
+
+5. Phép toán Lambda
+Lambda trong Python là cách viết nhanh hàm "nặc danh" (anonymous function) không cần từ khóa def. Hàm lambda thường dùng cho các thao tác ngắn gọn, đơn giản.
+Cú pháp:
+ten_ham = lambda x: x**2
+print(ten_ham(5))  # 25
+
+Code:
+lai_suat_nam = lambda von, lai_suat: von * lai_suat
+print(lai_suat_nam(1000, 0.05))  # 50
+
+5. So khớp mẫu
+match subject:
+    case pattern_1:
+        # code block if subject matches pattern_1
+    case pattern_2:
+        # code block if subject matches pattern_2
+    case _:
+        # code block if none of the above patterns match
+
+#code:
+status_code = 404
+
+match status_code:
+    case 200:
+        print("OK")
+    case 404:
+        print("Not Found")
+    case 500:
+        print("Server Error")
+    case _:
+        print("Unknown Status")
+
+
+# code:
+data = ("co_phieu", "AAPL", 100)
+
+match data:
+    case ("co_phieu", symbol, quantity):
+        print(f"This is a stock: {symbol}, quantity: {quantity}")
+    case ("trai_phieu", symbol, par_value, coupon_rate, years):
+        print(f"This is a bond: {symbol}, par value: {par_value}, coupon: {coupon_rate}, years: {years}")
+    case _:
+        print("Unknown asset")
+
+
+
+
+
+
+

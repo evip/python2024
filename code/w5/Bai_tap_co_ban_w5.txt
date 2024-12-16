@@ -1,0 +1,96 @@
+Đề bài 1:
+Viết hàm lai_kep(von_goc, lai_suat, so_nam) trả về số tiền sau so_nam năm.
+Công thức: future_value = von_goc * (1 + lai_suat)**so_nam
+
+Gợi ý code:
+def lai_kep(von_goc, lai_suat, so_nam):
+    return von_goc * (1 + lai_suat) ** so_nam
+
+# Kiểm tra hàm
+print(lai_kep(1000, 0.05, 3))
+
+--------------------------------------------------------------------------------
+
+Đề bài 2:
+Viết hàm chuyen_doi_tien_te(so_tien, ty_gia) trong đó ty_gia là số tiền nội tệ tương ứng 1 đơn vị ngoại tệ.
+Hàm trả về số tiền sau khi chuyển đổi.
+
+Gợi ý code:
+def chuyen_doi_tien_te(so_tien, ty_gia):
+    # Giả sử so_tien là giá trị ngoại tệ, chúng ta chuyển về nội tệ
+    return so_tien * ty_gia
+
+# Kiểm tra hàm
+print(chuyen_doi_tien_te(100, 23_500))  # 100 USD -> 2,350,000 VND (ví dụ)
+
+--------------------------------------------------------------------------------
+
+Đề bài 3:
+Viết hàm trung_binh(values) nhận vào một danh sách các giá trị và trả về trung bình cộng của chúng.
+
+Gợi ý code:
+def trung_binh(values):
+    return sum(values) / len(values) if len(values) > 0 else 0
+
+# Kiểm tra hàm
+data = [100, 200, 300, 400, 500]
+print(trung_binh(data))  # Kỳ vọng: 300.0
+
+--------------------------------------------------------------------------------
+
+Đề bài 4:
+Tạo một hàm lambda tính giá trị hiện tại (PV) của một khoản tiền tương lai (FV):
+Công thức: PV = FV / (1 + r)**n
+
+Gợi ý code:
+pv = lambda FV, r, n: FV / ((1 + r) ** n)
+
+# Kiểm tra lambda
+print(pv(1000, 0.05, 2))  # PV = 1000 / 1.05^2 ≈ 907.029
+
+--------------------------------------------------------------------------------
+
+Đề bài 5: Xây dựng mô-đun tài chính và sử dụng trong mã chính
+Yêu cầu:
+- Tạo một file tai_chinh.py làm mô-đun chứa các hàm tài chính như:
+	* tinh_npv(cash_flows, discount_rate)
+	* tinh_irr(cash_flows): Ước tính IRR bằng phương pháp tìm nghiệm (có thể sử dụng scipy.optimize nếu được).
+	* tinh_pv(fv, r, n): Tính Present Value.
+- Sau đó, trong file main.py, import mô-đun tai_chinh và gọi các hàm này để tính toán.
+
+Gợi ý code tai_chinh.py:
+
+# tai_chinh.py
+def tinh_npv(cash_flows, discount_rate):
+    npv = 0
+    for t, cf in enumerate(cash_flows, start=1):
+        npv += cf / ((1 + discount_rate) ** t)
+    return npv
+
+def tinh_pv(fv, r, n):
+    return fv / ((1 + r) ** n)
+
+# IRR có thể tính xấp xỉ bằng cách thử nhiều discount_rate:
+def tinh_irr(cash_flows, low=0.0, high=1.0, tol=1e-6):
+    # Phương pháp chia đôi (binary search) để tìm IRR
+    while (high - low) > tol:
+        mid = (low + high) / 2
+        npv_mid = tinh_npv(cash_flows, mid)
+        if npv_mid > 0:
+            low = mid
+        else:
+            high = mid
+    return (low + high) / 2
+
+Gợi ý code main.py:
+
+import tai_chinh
+
+dong_tien = [-1000, 200, 300, 500]
+r = 0.1
+print("NPV:", tai_chinh.tinh_npv(dong_tien, r))
+print("IRR:", tai_chinh.tinh_irr(dong_tien))
+print("PV:", tai_chinh.tinh_pv(1000, 0.05, 3))
+
+
+--------------------------------------------------------------------------------
