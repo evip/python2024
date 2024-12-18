@@ -1,0 +1,42 @@
+1. Danh sách (List)
+- Định nghĩa: Một cấu trúc dữ liệu có thứ tự, có thể thay đổi.
+- Đặc điểm:
+	+ Hỗ trợ thêm, xóa, thay đổi giá trị các phần tử.
+	+ Truy cập bằng chỉ mục.
+- Ứng dụng: Lưu trữ dữ liệu cần duy trì thứ tự và thay đổi linh hoạt.
+- Cú pháp:
+	my_list = [1, 2, 3, 4]
+
+2. Tập hợp (Set)
+- Định nghĩa: Một tập hợp không có phần tử trùng lặp, không duy trì thứ tự.
+- Đặc điểm:
+	+ Hỗ trợ các phép toán tập hợp: hợp, giao, hiệu.
+	+ Không thể truy cập phần tử bằng chỉ mục.
+- Ứng dụng: Lọc dữ liệu trùng lặp, xử lý dữ liệu duy nhất.
+- Cú pháp:
+	my_set = {1, 2, 3}
+
+3. Bộ dữ liệu (Tuple)
+- Định nghĩa: Một cấu trúc dữ liệu có thứ tự, không thể thay đổi sau khi tạo.
+- Đặc điểm:
+	+ Bất biến, an toàn khi lưu dữ liệu cố định.
+	+ Truy cập bằng chỉ mục.
+- Ứng dụng: Lưu thông tin không thay đổi như tọa độ, thông số.
+- Cú pháp:
+	my_tuple = (1, 2, 3)
+
+4. Từ điển (Dictionary)
+- Định nghĩa: Lưu trữ dữ liệu dưới dạng cặp key-value.
+- Đặc điểm:
+	+ Truy cập nhanh qua khóa.
+	+ Hỗ trợ thêm, cập nhật, xóa giá trị theo khóa.
+- Ứng dụng: Lưu thông tin có cấu trúc như thông tin khách hàng.
+- Cú pháp:
+	my_dict = {"key1": "value1", "key2": "value2"}
+
+
+Tóm tắt lựa chọn kiểu dữ liệu:
+* List: Khi cần dữ liệu có thứ tự và thay đổi được.
+* Set: Khi cần đảm bảo dữ liệu không trùng lặp.
+* Tuple: Khi dữ liệu cố định và không thay đổi.
+* Dictionary: Khi cần lưu trữ dữ liệu dạng key-value để truy cập nhanh.

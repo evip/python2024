@@ -1,0 +1,79 @@
+I. Đề bài:
+1. Xây dựng một chương trình Python để quản lý thông tin giao dịch tại một ngân hàng.
+2. Chương trình cần thực hiện các chức năng sau:
+- Danh sách: Lưu trữ tên các khách hàng.
+- Tập hợp: Lưu các mã giao dịch duy nhất.
+- Bộ dữ liệu: Lưu thông tin chi tiết của một giao dịch (mã giao dịch, ngày, số tiền).
+- Từ điển: Lưu thông tin khách hàng và các giao dịch của họ.
+
+II. Yêu cầu chi tiết:
+1. Tạo dữ liệu ban đầu:
+- Danh sách gồm tên 5 khách hàng.
+- Tập hợp mã giao dịch (5 mã giao dịch).
+- Bộ dữ liệu lưu chi tiết một giao dịch: mã giao dịch, ngày, số tiền.
+- Từ điển lưu thông tin khách hàng và các giao dịch của họ.
+2. Chức năng của chương trình:
+- Thêm khách hàng mới vào danh sách.
+- Thêm mã giao dịch mới vào tập hợp.
+- Thêm một giao dịch vào từ điển theo mã khách hàng.
+- Hiển thị toàn bộ thông tin giao dịch của một khách hàng.
+- Tính tổng số tiền giao dịch của một khách hàng.
+
+III. Code gợi ý:
+# Dữ liệu ban đầu
+# Danh sách khách hàng
+customers = ["Nguyen Van A", "Tran Thi B", "Le Van C", "Pham Thi D", "Do Van E"]
+
+# Tập hợp mã giao dịch
+transaction_ids = {"TX001", "TX002", "TX003", "TX004", "TX005"}
+
+# Từ điển khách hàng và giao dịch của họ
+customer_data = {
+    "KH001": {"name": "Nguyen Van A", "transactions": []},
+    "KH002": {"name": "Tran Thi B", "transactions": []},
+    "KH003": {"name": "Le Van C", "transactions": []},
+    "KH004": {"name": "Pham Thi D", "transactions": []},
+    "KH005": {"name": "Do Van E", "transactions": []},
+}
+
+# Thêm một giao dịch mới
+def add_transaction(customer_id, transaction_id, date, amount):
+    # Kiểm tra nếu mã giao dịch đã tồn tại
+    if transaction_id in transaction_ids:
+        print("Mã giao dịch đã tồn tại!")
+        return
+    
+    # Thêm mã giao dịch vào tập hợp
+    transaction_ids.add(transaction_id)
+    
+    # Tạo thông tin giao dịch dạng tuple
+    transaction = (transaction_id, date, amount)
+    
+    # Thêm giao dịch vào danh sách giao dịch của khách hàng
+    if customer_id in customer_data:
+        customer_data[customer_id]["transactions"].append(transaction)
+    else:
+        print("Mã khách hàng không tồn tại!")
+
+# Hiển thị thông tin giao dịch của một khách hàng
+def display_transactions(customer_id):
+    if customer_id in customer_data:
+        print(f"Giao dịch của khách hàng {customer_data[customer_id]['name']}:")
+        for transaction in customer_data[customer_id]["transactions"]:
+            print(f"  - Mã giao dịch: {transaction[0]}, Ngày: {transaction[1]}, Số tiền: {transaction[2]}")
+    else:
+        print("Mã khách hàng không tồn tại!")
+
+# Tính tổng số tiền giao dịch của một khách hàng
+def calculate_total(customer_id):
+    if customer_id in customer_data:
+        total = sum(transaction[2] for transaction in customer_data[customer_id]["transactions"])
+        print(f"Tổng số tiền giao dịch của {customer_data[customer_id]['name']}: {total}")
+    else:
+        print("Mã khách hàng không tồn tại!")
+
+# Thực thi chương trình
+add_transaction("KH001", "TX006", "2024-12-19", 5000000)
+add_transaction("KH002", "TX007", "2024-12-19", 7000000)
+display_transactions("KH001")
+calculate_total("KH001")

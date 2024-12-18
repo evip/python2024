@@ -88,7 +88,6 @@ print(irr)  # Ví dụ khoảng 0.13 (13%)
 
 ---------------------------------------------------------------
 
-
 Tóm tắt ý nghĩa và mối liên hệ giữa các hàm
 	tinh_npv: Đánh giá giá trị hiện tại của dòng tiền, cho biết dự án có nên đầu tư hay không.
 	tinh_pv: Tính giá trị hiện tại của một khoản tiền đơn lẻ trong tương lai, một hàm cơ bản để định giá dòng tiền.
