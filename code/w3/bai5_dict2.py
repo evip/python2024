@@ -16,3 +16,6 @@ del students["SV001"]
 
 # In toàn bộ thông tin sinh viên
 print(students)
+
+for item in students:
+    print(students[item])

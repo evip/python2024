@@ -1,0 +1,88 @@
+1. Mở và Đọc Tập Tin
+Trong Python, để làm việc với tập tin, ta sử dụng hàm open() để mở tập tin và các phương thức như read(), readline(), hoặc readlines() để đọc nội dung.
+
+Cú pháp:
+file = open('tên_tập_tin', 'chế_độ')
+
+Chế độ mở tập tin:
+
+'r': Đọc (mặc định)
+'w': Ghi (tạo mới hoặc ghi đè)
+'a': Thêm vào cuối tập tin
+'b': Mở tập tin ở chế độ nhị phân
+
+# Mở và đọc toàn bộ nội dung tập tin
+file = open('example.txt', 'r')
+content = file.read()
+print(content)
+file.close()
+
+
+2. Lệnh Lặp và Tập Tin
+Khi làm việc với tập tin lớn, việc đọc từng dòng một là hiệu quả hơn. Python hỗ trợ lặp qua tập tin bằng vòng for.
+
+Ví dụ:
+with open('example.txt', 'r') as file:
+    for line in file:
+        print(line.strip())
+
+Sử dụng with giúp tự động đóng tập tin sau khi hoàn thành thao tác.
+
+3. Sử dụng buffer để mở và đọc tập tin
+Đệm (buffering) giúp tối ưu hóa việc đọc và ghi tập tin bằng cách lưu trữ tạm thời dữ liệu trong bộ nhớ.
+
+Cú pháp:
+file = open('tên_tập_tin', 'chế_độ', buffering=buffer_size)
+
+
+buffer_size: Số lượng byte để đệm. Nếu để mặc định, Python sẽ tự chọn.
+Ví dụ:
+# Mở tập tin với đệm 1KB
+file = open('example.txt', 'r', buffering=1024)
+content = file.read()
+file.close()
+
+4. Serialization
+Serialization là quá trình chuyển đổi đối tượng Python thành một định dạng có thể lưu trữ hoặc truyền tải, thường sử dụng module pickle.
+
+Ví dụ:
+
+import pickle
+
+# Tạo đối tượng từ điển
+# Serialize đối tượng
+data = {'name': 'Alice', 'age': 30}
+with open('dl_tu_dien.pkl', 'wb') as file:
+    pickle.dump(data, file)
+
+# Deserialize đối tượng
+with open('dl_tu_dien.pkl', 'rb') as file:
+    loaded_data = pickle.load(file)
+    print(loaded_data)
+
+
+5. Làm Việc Với Cơ Sở Dữ Liệu
+Python cung cấp các thư viện như sqlite3 để tương tác với cơ sở dữ liệu SQLite.
+
+Ví dụ:
+
+import sqlite3
+
+# Kết nối đến cơ sở dữ liệu (tạo mới nếu chưa tồn tại)
+conn = sqlite3.connect('lop_L12.db')
+cursor = conn.cursor()
+
+# Tạo bảng
+cursor.execute('''CREATE TABLE IF NOT EXISTS sinh_vien_L12 (id INTEGER PRIMARY KEY, ten TEXT, tuoi INTEGER)''')
+
+# Chèn dữ liệu
+cursor.execute("INSERT INTO sinh_vien_L12 (ten, tuoi) VALUES (?, ?)", ('Le Thi Son', 21))
+
+# Lưu thay đổi và đóng kết nối
+conn.commit()
+conn.close()
+
+
+
+
+
