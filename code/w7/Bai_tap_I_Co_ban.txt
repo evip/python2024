@@ -1,0 +1,166 @@
+Bài 1: Tạo một lớp Student có thuộc tính name và age, có phương thức introduce() để in ra thông tin cơ bản của sinh viên.
+
+Gợi ý giải:
+Khai báo lớp Student với hàm khởi tạo __init__().
+Trong phương thức introduce(), in ra thông tin name và age.
+Tạo vài đối tượng Student và gọi phương thức introduce().
+
+code:
+
+class Student:
+    def __init__(self, name, age):
+        self.name = name
+        self.age = age
+
+    def introduce(self):
+        print(f"Hello, my name is {self.name}, I'm {self.age} years old.")
+
+# Kiểm thử
+s1 = Student("Alice", 20)
+s2 = Student("Bob", 22)
+
+s1.introduce()  # Hello, my name is Alice, I'm 20 years old.
+s2.introduce()  # Hello, my name is Bob, I'm 22 years old.
+
+-----------------------------------------------------------------------------
+Bài 2: Tạo lớp Rectangle có hai thuộc tính length (chiều dài) và width (chiều rộng). Thêm phương thức:
+	* area() để tính diện tích,
+	* perimeter() để tính chu vi.
+	* Tạo một đối tượng Rectangle, gán giá trị và in ra diện tích, chu vi của nó.
+
+- Gợi ý giải:
+Khai báo lớp Rectangle với hai thuộc tính length và width.
+Phương thức area() trả về length * width.
+Phương thức perimeter() trả về 2*(length + width).
+Tạo đối tượng, gọi phương thức và in kết quả.
+
+- code:
+
+class Rectangle:
+    def __init__(self, length, width):
+        self.length = length
+        self.width = width
+
+    def area(self):
+        return self.length * self.width
+
+    def perimeter(self):
+        return 2 * (self.length + self.width)
+
+# Kiểm thử
+rect = Rectangle(5, 3)
+print("Area:", rect.area())           # 15
+print("Perimeter:", rect.perimeter()) # 16
+
+-----------------------------------------------------------------------------
+
+Bài 3: Tạo lớp Car với các thuộc tính:
+	* brand (hãng xe),
+	* model (mẫu xe),
+	* year (năm sản xuất),
+	kèm một phương thức info() để in đầy đủ thông tin xe.
+	Tạo một vài đối tượng Car và in ra thông tin.
+
+- code: 
+
+class Car:
+    def __init__(self, brand, model, year):
+        self.brand = brand
+        self.model = model
+        self.year = year
+
+    def info(self):
+        print(f"Car: {self.brand} {self.model}, manufactured in {self.year}.")
+
+# Kiểm thử
+car1 = Car("Toyota", "Corolla", 2020)
+car2 = Car("Tesla", "Model 3", 2021)
+
+car1.info()  # Car: Toyota Corolla, manufactured in 2020.
+car2.info()  # Car: Tesla Model 3, manufactured in 2021.
+
+-----------------------------------------------------------------------------
+
+Bài 4: Sử dụng đóng gói (Encapsulation) bằng cách:
+	- Một thuộc tính self._secret_code (ví dụ: "XYZ123"),
+	- Một phương thức get_secret_code() để lấy giá trị thuộc tính này.
+
+- Code:
+
+class SecretBox:
+    def __init__(self, secret_code):
+        self._secret_code = secret_code  # Thuộc tính "private" theo quy ước
+
+    def get_secret_code(self):
+        return self._secret_code
+
+# Kiểm thử
+box = SecretBox("XYZ123")
+print(box.get_secret_code())  # XYZ123
+
+# Truy cập trực tiếp (không khuyến khích, nhưng Python vẫn cho phép)
+print(box._secret_code)       # XYZ123 (vẫn truy cập được do Python chỉ quy ước)
+
+-----------------------------------------------------------------------------
+
+Bài 5:
+Tạo lớp Animal (có thuộc tính name, phương thức eat()).
+Tạo lớp Mammal kế thừa Animal (có thêm phương thức walk()).
+Tạo lớp Dog kế thừa Mammal (có phương thức bark()).
+Tạo đối tượng Dog và kiểm thử các phương thức eat(), walk(), bark().
+
+- Code: 
+class Animal:
+    def __init__(self, name):
+        self.name = name
+
+    def eat(self):
+        print(f"{self.name} is eating.")
+
+class Mammal(Animal):
+    def walk(self):
+        print(f"{self.name} is walking on land.")
+
+class Dog(Mammal):
+    def bark(self):
+        print(f"{self.name} is barking.")
+
+# Kiểm thử
+dog = Dog("Buddy")
+dog.eat()   # Buddy is eating.      -> kế thừa từ lớp Animal
+dog.walk()  # Buddy is walking ...  -> kế thừa từ lớp Mammal
+dog.bark()  # Buddy is barking.     -> phương thức Dog tự định nghĩa
+
+
+-----------------------------------------------------------------------------
+
+Bài 6:
+Tạo lớp Employee với phương thức get_salary().
+Tạo lớp Manager kế thừa Employee và ghi đè get_salary() để thêm tiền thưởng (bonus) vào lương cơ bản.
+Tạo đối tượng Manager để kiểm tra sự ghi đè.
+
+- Code: 
+
+class Employee:
+    def __init__(self, base_salary):
+        self.base_salary = base_salary
+
+    def get_salary(self):
+        return self.base_salary
+
+class Manager(Employee):
+    def __init__(self, base_salary, bonus):
+        super().__init__(base_salary)
+        self.bonus = bonus
+
+    # Ghi đè phương thức get_salary()
+    def get_salary(self):
+        return self.base_salary + self.bonus
+
+# Kiểm thử
+emp = Employee(5000)
+mgr = Manager(5000, 2000)
+
+print("Employee salary:", emp.get_salary())  # 5000
+print("Manager salary:", mgr.get_salary())    # 7000 (5000 + 2000 bonus)
+

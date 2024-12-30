@@ -1,0 +1,78 @@
+1. Khái niệm lập trình hướng đối tượng
+- Lập trình hướng đối tượng (Object-Oriented Programming – OOP) là mô hình lập trình dựa trên việc chia chương trình thành các đối tượng (object). Mỗi đối tượng có:
+	* Thuộc tính (attributes/properties): Nêu đặc điểm, dữ liệu, trạng thái của đối tượng.
+	* Phương thức (methods): Hành vi, hành động mà đối tượng có thể thực hiện.
+
+- OOP thường gắn liền với bốn nguyên tắc chính:
+	* Đóng gói (Encapsulation)
+	* Kế thừa (Inheritance)
+	* Đa hình (Polymorphism)
+	* Trừu tượng (Abstraction)
+
+- Lợi ích:
+	* Tái sử dụng mã (reuse) thông qua kế thừa.
+	* Bảo mật dữ liệu thông qua đóng gói.
+	* Tổ chức code theo mô hình mô phỏng thực tế, dễ bảo trì.
+
+2. Khái niệm lớp (class) và đối tượng (object)
+- Lớp (class): Khuôn mẫu (blueprint) để tạo ra các đối tượng. Lớp định nghĩa các thuộc tính (biến) và phương thức (hàm) chung.
+
+- Đối tượng (object): Thực thể được tạo ra từ lớp. Mỗi đối tượng chứa thông tin riêng (trong các biến) và các phương thức hoạt động trên thông tin đó.
+
+Ví dụ code:
+
+class Dog:
+    # thuộc tính (của lớp Dog)
+    species = "Canis familiaris"
+
+    def __init__(self, name, age):
+        self.name = name
+        self.age = age
+    
+    # phương thức
+    def bark(self):
+        print(f"{self.name} is barking!")
+    
+# Tạo đối tượng:
+my_dog = Dog("Buddy", 3)
+my_dog.bark()  # Buddy is barking!
+
+
+3. Lớp, đối tượng và thể hiện (instance)
+- Thể hiện (instance) chính là đối tượng cụ thể được tạo ra từ một lớp.
+	Ví dụ: my_dog ở trên là một instance của lớp Dog.
+
+- Có thể tạo nhiều đối tượng (thể hiện) từ cùng một lớp. Mỗi đối tượng mang thông tin riêng, nhưng được tổ chức dựa theo cùng một khuôn mẫu (class).
+
+4. Bao đóng (Encapsulation)
+- Đóng gói là việc gom nhóm dữ liệu và các phương thức xử lý dữ liệu vào cùng một đơn vị (class).
+
+- Trong Python, chúng ta thường đánh dấu thuộc tính riêng tư (private) bằng tiền tố gạch dưới _. Tuy không chặt chẽ như một số ngôn ngữ khác (C++, Java), nhưng đây là quy ước ngầm ý:
+	self._attribute: thuộc tính dùng nội bộ (protected hoặc private theo ý nghĩa logic).
+
+- Lợi ích:
+	* Dễ bảo trì, dễ thay đổi nội bộ mà không ảnh hưởng đến bên ngoài.
+	* Bảo vệ dữ liệu, tránh bị sửa đổi ngoài ý muốn.
+
+5. Kế thừa (Inheritance)
+- Kế thừa cho phép một lớp con (subclass) thừa hưởng các thuộc tính, phương thức từ lớp cha (superclass/parent class).
+
+- Lớp con có thể mở rộng hoặc ghi đè (override) các phương thức của lớp cha.
+
+Ví dụ code:
+
+class Animal:
+    def __init__(self, name):
+        self.name = name
+    
+    def eat(self):
+        print(f"{self.name} is eating.")
+
+class Dog(Animal):
+    def bark(self):
+        print(f"{self.name} is barking.")
+
+# Lớp Dog kế thừa từ lớp Animal, nên có thể dùng cả eat() và bark()
+dog = Dog("Buddy")
+dog.eat()   # Buddy is eating.
+dog.bark()  # Buddy is barking.
