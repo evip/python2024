@@ -1,8 +1,9 @@
 # Python_2024
 Phone: 0905 400 248
 
-<a href="zalo.me/g/enespg614">Nhóm Zalo lớp Python L12 </a> (không phải L14)
-zalo.me/g/enespg614
+Nhóm Zalo lớp Python L12 (không phải L14)<br>
+Liên kết: zalo.me/g/enespg614
+<img src="img/L12.jpg" />
 
 <h1>Sinh viên học Python thông qua các vấn đề sau.</h1>
 
