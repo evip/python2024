@@ -1,0 +1,22 @@
+Derivative Tools in DEX
+├── Options
+│   ├── Call (Buy)
+│   ├── Put (Sell)
+│   ├── Platforms: Opyn, Hegic
+│   └── Use Cases: Hedging, Speculation
+├── Perpetual Contracts
+│   ├── Mechanism: Funding Rate
+│   ├── Platforms: dYdX, Perpetual Protocol
+│   └── Use Cases: Leveraged Trading, Arbitrage
+├── Futures
+│   ├── Types: Physical, Cash-Settled
+│   ├── Platforms: MCDEX
+│   └── Use Cases: Hedging, Speculation
+├── Swaps
+│   ├── Types: Interest Rate, Asset
+│   ├── Platforms: Aave, Compound
+│   └── Use Cases: Risk Management, Arbitrage
+└── Synthetic Assets
+    ├── Mechanism: CDPs
+    ├── Platforms: Synthetix
+    └── Use Cases: Diverse Exposure, Hedging
