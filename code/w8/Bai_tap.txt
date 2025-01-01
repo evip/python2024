@@ -1,0 +1,19 @@
+Bài tập 01.
+Giả sử bạn có một danh sách lãi suất ngân hàng theo tháng trong 6 tháng đầu năm. Hãy sử dụng NumPy để:
+- Tạo một mảng NumPy từ danh sách lãi suất này.
+- Tính lãi suất trung bình, lãi suất cao nhất và thấp nhất.
+- Tính khoản tiền lãi (theo đơn vị VNĐ) mà bạn nhận được nếu ban đầu gửi tiết kiệm 10 triệu VNĐ (10,000,000 VNĐ), với giả định lãi suất mỗi tháng tính trên gốc ban đầu (để đơn giản hóa).
+
+
+Bài tập 02.
+Giả sử bạn có một danh mục gồm 3 loại cổ phiếu (A, B, và C). Dữ liệu giá cổ phiếu (theo phiên giao dịch, hoặc theo ngày) được lưu trong một mảng NumPy 2D, mỗi cột đại diện cho một cổ phiếu, mỗi hàng tương ứng với một phiên giao dịch/ngày.
+
+Bạn hãy:
+	* Tạo mảng NumPy prices (dòng là phiên, cột là loại cổ phiếu).
+	* Tính lợi nhuận (return) hàng ngày (phần trăm thay đổi giá) cho mỗi cổ phiếu.
+	* Tạo trọng số (weights) cho danh mục đầu tư (giả sử tỉ lệ đầu tư A:B:C = 0.4 : 0.3 : 0.3).
+	* Tính lợi nhuận trung bình của toàn danh mục theo trọng số.
+
+
+
+
