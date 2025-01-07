@@ -1,5 +1,6 @@
 # Python_2024
 Phone: 0905 400 248
+Email: thuandd@hub.edu.vn
 
 Nhóm Zalo lớp Python L12 (không phải L14)<br>
 Liên kết: zalo.me/g/enespg614
