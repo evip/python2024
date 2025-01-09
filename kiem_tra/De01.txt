@@ -1,0 +1,6 @@
+- Trong file taikhoan.py ở code/w7, hãy chỉ ra chỗ nào thể hiện tính thừa kế.
+- Viết lớp TamGiac
+	+ thuộc tính: canh1, canh2, canh3
+	+ phương thức:
+		* Nhập cạnh
+		* tính diện tính
