@@ -1,0 +1,1 @@
+ viết hàm kiểm tra 3 số a, b, c thuộc tam giác vuông hay không, sử dụng if-elif-else nhiều lần.
